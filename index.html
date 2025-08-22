@@ -267,11 +267,9 @@
         <div class="code-container">
             <button class="copy-button" onclick="copyCode(this)">Copy</button>
             <div class="code-block">{%- liquid 
-  assign target = product 
-  assign price = target.price | default: 199 
-  assign available = target.available | default: false 
-  assign aiod_auto_discounted_price = target.price 
-  assign original_display_price = target.price 
+  assign target = product
+  assign available = target.available | default: false
+  assign original_display_price = target.price
 -%}
 
 {%- unless target == null -%}
