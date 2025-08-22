@@ -20,7 +20,7 @@ If you prefer to follow the setup yourself, use the instructions below.
 4. Name the file: `aiod-price-crossout.liquid`
 5. Paste the following code into the newly created file:
 
-```liquid
+```js
 {%- liquid 
   assign target = product 
   assign price = target.price | default: 199 
@@ -90,7 +90,7 @@ If you prefer to follow the setup yourself, use the instructions below.
 4. You should find 2 instances of this line
 5. **Below each line**, paste the following code:
 
-```liquid
+```js
 {% render 'aiod-price-crossout', product: card_product %}
 ```
 
@@ -103,7 +103,7 @@ If you're using a custom or third-party theme, you need to:
 1. Identify the file that renders your product collection pages
 2. Add the following line in the appropriate location:
 
-```liquid
+```js
 {% render 'aiod-price-crossout', product: card_product %}
 ```
 
