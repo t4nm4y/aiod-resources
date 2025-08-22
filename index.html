@@ -274,10 +274,11 @@
 
 {%- unless target == null -%}
   {%- if available -%}
-    &lt;div product-id="{{ product.id }}" 
-         aiod-product-collections="{{ product.collections | map: 'id' | join: ',' }}" 
-         aiod-product-variants="{{ product.variants | map: 'id' | join: ',' }}" 
-         class="aiod-card-price-container price"&gt;
+    &lt;div product-id="{{ product.id }}"
+        product-price= "{{ product.price | json }}"
+        aiod-product-collections="{{ product.collections | map: 'id' | join: ',' }}" 
+        aiod-product-variants="{{ product.variants | map: 'id' | join: ',' }}" 
+        class="aiod-card-price-container price"&gt;
       
       &lt;span class="price-item price-item-regular aiod-original-price"&gt;
         {% if settings.currency_code_enabled %}
