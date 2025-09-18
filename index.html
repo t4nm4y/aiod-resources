@@ -276,6 +276,7 @@
   {%- if available -%}
     &lt;div product-id="{{ product.id }}"
         product-price= "{{ product.price | json }}"
+        product-compare-at-price= "{{ product.compare_at_price | json }}"
         aiod-product-collections="{{ product.collections | map: 'id' | join: ',' }}" 
         aiod-product-variants="{{ product.variants | map: 'id' | join: ',' }}" 
         class="aiod-card-price-container price"&gt;
