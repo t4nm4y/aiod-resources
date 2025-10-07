@@ -282,11 +282,7 @@
         class="aiod-card-price-container price"&gt;
       
       &lt;span class="price-item price-item-regular aiod-original-price"&gt;
-        {% if settings.currency_code_enabled %}
           {{ original_display_price | money_with_currency }}
-        {% else %}
-          {{ original_display_price | money }}
-        {% endif %}
       &lt;/span&gt;
       
       &lt;span class="price-item price-item-sale aiod-discounted-price"&gt;&lt;/span&gt;
