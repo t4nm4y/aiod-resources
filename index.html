@@ -268,12 +268,11 @@
             <button class="copy-button" onclick="copyCode(this)">Copy</button>
             <div class="code-block">{%- liquid 
   assign target = product
-  assign available = target.available | default: false
+  # assign available = target.available | default: false
   assign original_display_price = target.price
 -%}
 
 {%- unless target == null -%}
-  {%- if available -%}
     &lt;div product-id="{{ product.id }}"
         product-price= "{{ product.price | json }}"
         product-compare-at-price= "{{ product.compare_at_price | json }}"
@@ -313,7 +312,6 @@
         hideOriginalProductPrice{{ product.id }}();
       }
     &lt;/script&gt;
-  {%- endif -%}
 {% endunless %}</div>
         </div>
 
