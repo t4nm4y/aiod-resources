@@ -334,6 +334,7 @@
             <li><span class="step-number">3.</span><span class="step-content">Search for: <span class="inline-code">render 'price'</span></span></li>
             <li><span class="step-number">4.</span><span class="step-content">You should find 4 instances of this line</span></li>
             <li><span class="step-number">5.</span><span class="step-content">Below the <strong>1st</strong> and <strong>Last</strong> instance of this line, paste the following code:</span></li>
+            <li><span class="step-number">6.</span><span class="step-content">NOTE: If you see double price issue, then please comment out the original render price, so that only the 'aiod-price-crossout' is visible.</span></li>
         </ol>
 
         <div class="code-container">
@@ -342,7 +343,7 @@
         </div>
 
         <ol start="6">
-            <li><span class="step-number">6.</span><span class="step-content">Click <strong>"Save"</strong></span></li>
+            <li><span class="step-number">7.</span><span class="step-content">Click <strong>"Save"</strong></span></li>
         </ol>
 
         <h3>For Custom/Third-party Themes:</h3>
@@ -358,6 +359,10 @@
             <button class="copy-button" onclick="copyCode(this)">Copy</button>
             <div class="code-block">{% render 'aiod-price-crossout', product: card_product %}</div>
         </div>
+
+        <ol start="6">
+            <li><span class="step-number">3.</span><span class="step-content">NOTE: If you see double price issue, then please comment out the original render price, so that only the 'aiod-price-crossout' is visible.</span></li>
+        </ol>
 
         <div class="warning">
             <strong>Need help?</strong> Contact our support team - we'll help you identify the correct file and placement.
