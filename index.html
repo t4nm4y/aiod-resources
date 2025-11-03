@@ -278,7 +278,7 @@
         product-compare-at-price= "{{ product.compare_at_price | json }}"
         aiod-product-collections="{{ product.collections | map: 'id' | join: ',' }}" 
         aiod-product-variants="{{ product.variants | map: 'id' | join: ',' }}" 
-        class="aiod-card-price-container price {% unless available %}not-available{% endunless %}&gt;
+        class="aiod-card-price-container price {% unless available %}not-available{% endunless %}"&gt;
       
       &lt;span class="price-item price-item-regular aiod-original-price"&gt;
           {{ original_display_price | money_with_currency }}
