@@ -94,6 +94,9 @@
             line-height: 1.6;
             white-space: pre-wrap;
             color: #24292e;
+            align-items: start;
+            text-align: left;
+
         }
         
         .copy-button {
@@ -338,7 +341,9 @@
 
         <div class="code-container">
             <button class="copy-button" onclick="copyCode(this)">Copy</button>
-            <div class="code-block">{% render 'aiod-price-crossout', product: card_product %}</div>
+            <div class="code-block">{% comment %} AIOD Crossout, to disable: comment the below line, and uncomment the above line to enable original price {% endcomment %}
+                <br>{% render 'aiod-price-crossout', product: card_product %}
+            </div>
         </div>
 
         <ol start="6">
@@ -360,7 +365,9 @@
 
         <div class="code-container">
             <button class="copy-button" onclick="copyCode(this)">Copy</button>
-            <div class="code-block">{% render 'aiod-price-crossout', product: card_product %}</div>
+            <div class="code-block">{% comment %} AIOD Crossout, to disable: comment the below line, and uncomment the above line to enable original price {% endcomment %}
+                <br>{% render 'aiod-price-crossout', product: card_product %}
+            </div>
         </div>
 
         <ol start="6">
