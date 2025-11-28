@@ -273,6 +273,7 @@
   assign target = product
   assign available = target.available | default: false
   assign original_display_price = target.price
+  assign target_variant = variant
 -%}
 
 {%- unless target == null -%}
@@ -280,7 +281,7 @@
         product-price= "{{ product.price | json }}"
         product-compare-at-price= "{{ product.compare_at_price | json }}"
         aiod-product-collections="{{ product.collections | map: 'id' | join: ',' }}" 
-        aiod-product-variants="{{ product.variants | map: 'id' | join: ',' }}" 
+        aiod-product-variants="{% if target_variant %}{{ target_variant.id }}{% else %}{{ product.variants | map: 'id' | join: ',' }}{% endif %}" 
         class="aiod-card-price-container price {% unless available %}not-available{% endunless %}"&gt;
       
       &lt;span class="price-item price-item-regular aiod-original-price"&gt;
