@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +11,7 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
             line-height: 1.7;
@@ -22,11 +23,11 @@
             font-size: 16px;
             font-weight: 400;
         }
-        
+
         .container {
             padding: 40px 20px;
         }
-        
+
         h1 {
             font-size: 2.5rem;
             font-weight: 300;
@@ -35,7 +36,7 @@
             letter-spacing: -0.02em;
             line-height: 1.2;
         }
-        
+
         h2 {
             font-size: 1.5rem;
             font-weight: 500;
@@ -43,26 +44,26 @@
             margin: 25px 0 15px 0;
             letter-spacing: -0.01em;
         }
-        
+
         h3 {
             font-size: 1.25rem;
             font-weight: 500;
             color: #1a1a1a;
             margin: 20px 0 12px 0;
         }
-        
+
         h4 {
             font-size: 1.1rem;
             font-weight: 500;
             color: #1a1a1a;
             margin: 18px 0 10px 0;
         }
-        
+
         p {
             margin-bottom: 16px;
             color: #4a4a4a;
         }
-        
+
         .support-box {
             background-color: #EBF3FF;
             border: 1px solid #C6E7FF;
@@ -73,7 +74,7 @@
             margin: 25px 0;
             position: relative;
         }
-        
+
         .code-container {
             position: relative;
             margin: 20px 0;
@@ -82,8 +83,9 @@
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
             background-color: #f8f9fa;
             border: 1px solid #e9ecef;
+            padding-bottom: 8px;
         }
-        
+
         .code-block {
             padding: 20px;
             border-radius: 16px;
@@ -98,7 +100,7 @@
             text-align: left;
 
         }
-        
+
         .copy-button {
             position: absolute;
             top: 12px;
@@ -114,19 +116,19 @@
             font-family: inherit;
             transition: all 0.2s ease;
         }
-        
+
         .copy-button:hover {
             background-color: #bbdefb;
             border-color: #90caf9;
             color: #1565c0;
         }
-        
+
         .copy-button.copied {
             background-color: #e8f5e8;
             border-color: #81c784;
             color: #2e7d32;
         }
-        
+
         .inline-code {
             background-color: #f0f7ff;
             padding: 4px 8px;
@@ -136,32 +138,33 @@
             color: #1565c0;
             border: 1px solid #e1f5fe;
         }
-        
-        ol, ul {
+
+        ol,
+        ul {
             margin: 16px 0;
             padding-left: 20px;
         }
-        
+
         ol {
             list-style: none;
             counter-reset: step-counter;
         }
-        
+
         ol li {
             counter-increment: step-counter;
             margin: 10px 0;
             color: #4a4a4a;
         }
-        
+
         ol li::before {
             display: none;
         }
-        
+
         strong {
             color: #1a1a1a;
             font-weight: 600;
         }
-        
+
         .step-number {
             display: inline-block;
             width: auto;
@@ -176,13 +179,13 @@
             color: #1a1a1a;
             margin-right: 8px;
         }
-        
+
         .step-content {
             display: inline-block;
             vertical-align: top;
             width: calc(100% - 30px);
         }
-        
+
         .warning {
             background-color: #fff8e1;
             border: 1px solid #ffcc02;
@@ -191,8 +194,9 @@
             margin: 20px 0;
             position: relative;
         }
-        
-        .warning p, .warning ul {
+
+        .warning p,
+        .warning ul {
             margin-left: 25px;
         }
 
@@ -210,28 +214,29 @@
         .book-call-button:hover {
             background-color: #4C4C4C;
         }
-        
+
         hr {
             border: none;
             height: 1px;
             background: linear-gradient(90deg, transparent 0%, #e3f2fd 50%, transparent 100%);
             margin: 30px 0;
         }
-        
+
         @media (max-width: 768px) {
             .container {
                 padding: 40px 20px;
             }
-            
+
             h1 {
                 font-size: 2rem;
                 margin-bottom: 40px;
             }
-            
-            .support-box, .warning {
+
+            .support-box,
+            .warning {
                 padding: 24px;
             }
-            
+
             .code-block {
                 padding: 20px;
                 padding-top: 50px;
@@ -240,6 +245,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1>Enable Strike-through Price On Collection Product Cards</h1>
@@ -260,63 +266,21 @@
         <h2>Step 1: Create the Price Crossout Snippet</h2>
 
         <ol>
-            <li><span class="step-number">1.</span><span class="step-content">Navigate to your <strong>store theme code editor</strong></span></li>
-            <li><span class="step-number">2.</span><span class="step-content">Right-click on the <strong>"snippets"</strong> folder</span></li>
-            <li><span class="step-number">3.</span><span class="step-content">Click <strong>"New file"</strong></span></li>
-            <li><span class="step-number">4.</span><span class="step-content">Name the file: <span class="inline-code">aiod-price-crossout.liquid</span></span></li>
-            <li><span class="step-number">5.</span><span class="step-content">Paste the following code into the newly created file:</span></li>
+            <li><span class="step-number">1.</span><span class="step-content">Navigate to your <strong>store theme code
+                        editor</strong></span></li>
+            <li><span class="step-number">2.</span><span class="step-content">Right-click on the
+                    <strong>"snippets"</strong> folder</span></li>
+            <li><span class="step-number">3.</span><span class="step-content">Click <strong>"New file"</strong></span>
+            </li>
+            <li><span class="step-number">4.</span><span class="step-content">Name the file: <span
+                        class="inline-code">aiod-price-crossout.liquid</span></span></li>
+            <li><span class="step-number">5.</span><span class="step-content">Paste the following code into the newly
+                    created file:</span></li>
         </ol>
 
         <div class="code-container">
             <button class="copy-button" onclick="copyCode(this)">Copy</button>
-            <div class="code-block">{%- liquid 
-  assign target = product
-  assign available = target.available | default: false
-  assign original_display_price = target.price
-  assign target_variant = variant
--%}
-
-{%- unless target == null -%}
-    &lt;div product-id="{{ product.id }}"
-        product-price= "{{ product.price | json }}"
-        product-compare-at-price= "{{ product.compare_at_price | json }}"
-        aiod-product-collections="{{ product.collections | map: 'id' | join: ',' }}" 
-        aiod-product-variants="{% if target_variant %}{{ target_variant.id }}{% else %}{{ product.variants | map: 'id' | join: ',' }}{% endif %}" 
-        class="aiod-card-price-container {% unless available %}not-available{% endunless %}"&gt;
-      
-      &lt;span class="price-item price-item-regular aiod-original-price"&gt;
-          {{ original_display_price | money_with_currency }}
-      &lt;/span&gt;
-      
-      &lt;span class="price-item price-item-sale aiod-discounted-price"&gt;&lt;/span&gt;
-      &lt;span class="aiod-discount-badge"&gt;&lt;/span&gt;
-    &lt;/div&gt;
-
-    &lt;script&gt;
-      function hideOriginalProductPrice{{ product.id }}() {
-        const aiodPriceContainer = document.querySelector(".aiod-card-price-container[product-id='{{ product.id }}']");
-        const parentContainer = aiodPriceContainer.closest('.card-information');
-        
-        if(parentContainer){
-          // Remove ALL original price elements
-          const originalPrices = parentContainer.querySelectorAll('div.price:not(.aiod-card-price-container)');
-          originalPrices.forEach(price =&gt; price.remove());
-        }
-        
-        const wholeCardParentContainer = aiodPriceContainer.closest('.card-wrapper');
-        if(wholeCardParentContainer){
-          wholeCardParentContainer.classList.add('aiod-product-card-wrapper');
-        }
-      }
-
-      // Execute immediately after DOM is ready
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', hideOriginalProductPrice{{ product.id }});
-      } else {
-        hideOriginalProductPrice{{ product.id }}();
-      }
-    &lt;/script&gt;
-{% endunless %}</div>
+            <div class="code-block" data-code-key="PRICE_CROSSOUT_SNIPPET"></div>
         </div>
 
         <ol start="6">
@@ -328,27 +292,33 @@
         <h3>For Official Shopify Themes (themes that are built by Shopify):</h3>
 
         <ol>
-            <li><span class="step-number">1.</span><span class="step-content">In the same <strong>"snippets"</strong> folder, locate and open <span class="inline-code">card-product.liquid</span></span></li>
+            <li><span class="step-number">1.</span><span class="step-content">In the same <strong>"snippets"</strong>
+                    folder, locate and open <span class="inline-code">card-product.liquid</span></span></li>
             <li><span class="step-number">2.</span><span class="step-content">Inside this file use the search function:
-                <ul>
-                    <li><strong>Mac</strong>: Press <span class="inline-code">Command+F</span></li>
-                    <li><strong>Windows</strong>: Press <span class="inline-code">Ctrl+F</span></li>
-                </ul>
-            </span></li>
-            <li><span class="step-number">3.</span><span class="step-content">Search for: <span class="inline-code">render 'price'</span></span></li>
-            <li><span class="step-number">4.</span><span class="step-content">You should find 4 instances of this line</span></li>
-            <li><span class="step-number">5.</span><span class="step-content">Below the <strong>1st</strong> and <strong>Last</strong> instance of this line, paste the following code:</span></li>
+                    <ul>
+                        <li><strong>Mac</strong>: Press <span class="inline-code">Command+F</span></li>
+                        <li><strong>Windows</strong>: Press <span class="inline-code">Ctrl+F</span></li>
+                    </ul>
+                </span></li>
+            <li><span class="step-number">3.</span><span class="step-content">Search for: <span
+                        class="inline-code">render 'price'</span></span></li>
+            <li><span class="step-number">4.</span><span class="step-content">You should find 4 instances of this
+                    line</span></li>
+            <li><span class="step-number">5.</span><span class="step-content">Below the <strong>1st</strong> and
+                    <strong>Last</strong> instance of this line, paste the following code:</span></li>
         </ol>
 
         <div class="code-container">
             <button class="copy-button" onclick="copyCode(this)">Copy</button>
-            <div class="code-block">{% comment %} AIOD Crossout, to disable: comment the below line, and uncomment the above line to enable original price {% endcomment %}
-                <br>{% render 'aiod-price-crossout', product: card_product %}
-            </div>
+            <div class="code-block" data-code-id="code-2"></div>
+            <script type="text/template" id="code-2">{% comment %} AIOD Crossout, to disable: comment the below line, and uncomment the above line to enable original price {% endcomment %}
+{% render 'aiod-price-crossout', product: card_product %}</script>
         </div>
 
         <ol start="6">
-            <li><span class="step-number">6.</span><span class="step-content">NOTE: If you see double price issue, then please comment out the original render price, so that only the 'aiod-price-crossout' is visible.</span></li>
+            <li><span class="step-number">6.</span><span class="step-content">NOTE: If you see double price issue, then
+                    please comment out the original render price, so that only the 'aiod-price-crossout' is
+                    visible.</span></li>
         </ol>
 
         <ol start="6">
@@ -360,26 +330,31 @@
         <p>If you're using a custom or third-party theme, you need to:</p>
 
         <ol>
-            <li><span class="step-number">1.</span><span class="step-content">Identify the file that renders your product collection pages</span></li>
-            <li><span class="step-number">2.</span><span class="step-content">Add the following line in the appropriate location:</span></li>
+            <li><span class="step-number">1.</span><span class="step-content">Identify the file that renders your
+                    product collection pages</span></li>
+            <li><span class="step-number">2.</span><span class="step-content">Add the following line in the appropriate
+                    location:</span></li>
         </ol>
 
         <div class="code-container">
             <button class="copy-button" onclick="copyCode(this)">Copy</button>
-            <div class="code-block">{% comment %} AIOD Crossout, to disable: comment the below line, and uncomment the above line to enable original price {% endcomment %}
-                <br>{% render 'aiod-price-crossout', product: card_product %}
-            </div>
+            <div class="code-block" data-code-id="code-3"></div>
+            <script type="text/template" id="code-3">{% comment %} AIOD Crossout, to disable: comment the below line, and uncomment the above line to enable original price {% endcomment %}
+{% render 'aiod-price-crossout', product: card_product %}</script>
         </div>
 
         <ol start="6">
-            <li><span class="step-number">3.</span><span class="step-content">NOTE: If you see double price issue, then please comment out the original render price, so that only the 'aiod-price-crossout' is visible.</span></li>
+            <li><span class="step-number">3.</span><span class="step-content">NOTE: If you see double price issue, then
+                    please comment out the original render price, so that only the 'aiod-price-crossout' is
+                    visible.</span></li>
         </ol>
         <ol start="6">
             <li><span class="step-number">4.</span><span class="step-content">Click <strong>"Save"</strong></span></li>
         </ol>
 
         <div class="warning">
-            <strong>Need help?</strong> Contact our support team - we'll help you identify the correct file and placement.
+            <strong>Need help?</strong> Contact our support team - we'll help you identify the correct file and
+            placement.
         </div>
 
         <div class="support-box">
@@ -397,32 +372,156 @@
     <script>
         // Constants
         const BOOK_CALL_LINK = 'https://cal.com/aiod-support/30min';
-        
+
+        // Code snippet for the first (large) code block - Edit this directly without HTML entities!
+        const CODE_SNIPPETS = {
+            PRICE_CROSSOUT_SNIPPET: `{%- liquid
+  assign target = product
+  assign available = target.available | default: false
+  assign original_display_price = target.price
+  assign target_variant = variant
+
+  comment
+    Optional range price props, pass props eg:
+    {% render 'aiod-price-crossout',
+      product: card_product,
+      compare_at_price_min: compare_at_price_min,
+      compare_at_price_max: compare_at_price_max,
+      curr_price_min: price_min,
+      curr_price_max: price_max,
+      is_range_price: true
+
+    If is_range_price is not passed, it will be calculated automatically
+  endcomment
+  if is_range_price == blank
+    assign is_range_price = false
+    if compare_at_price_min != blank and compare_at_price_max != blank and curr_price_min != blank and curr_price_max != blank
+      if compare_at_price_min > curr_price_min
+        assign is_range_price = true
+      endif
+    endif
+  endif
+-%}
+
+{%- unless target == null -%}
+  <div
+    product-id="{{ product.id }}"
+    product-price="{{ product.price | json }}"
+    product-compare-at-price="{{ product.compare_at_price | json }}"
+    aiod-product-collections="{{ product.collections | map: 'id' | join: ',' }}"
+    aiod-product-variants="{% if target_variant %}{{ target_variant.id }}{% else %}{{ product.variants | map: 'id' | join: ',' }}{% endif %}"
+    is_range_price="{{ is_range_price }}"
+    {%- if compare_at_price_min != blank %} compare_at_price_min="{{ compare_at_price_min | json }}"{%- endif -%}
+    {%- if compare_at_price_max != blank %} compare_at_price_max="{{ compare_at_price_max | json }}"{%- endif -%}
+    {%- if curr_price_min != blank %} curr_price_min="{{ curr_price_min | json }}"{%- endif -%}
+    {%- if curr_price_max != blank %} curr_price_max="{{ curr_price_max | json }}"{%- endif -%}
+    class="aiod-card-price-container {% unless available %}not-available{% endunless %}"
+  >
+    <span class="price-item price-item-regular aiod-original-price">
+      {%- if is_range_price -%}
+        {%- if compare_at_price_min == compare_at_price_max -%}
+          {{ compare_at_price_min | money_with_currency }}
+        {%- else -%}
+          {{ compare_at_price_min | money_with_currency }} - {{ compare_at_price_max | money_with_currency }}
+        {%- endif -%}
+      {%- else -%}
+        {{ original_display_price | money_with_currency }}
+      {%- endif -%}
+    </span>
+
+    <span class="price-item price-item-sale aiod-discounted-price">
+      {%- if is_range_price -%}
+        {%- if curr_price_min == curr_price_max -%}
+          {{ curr_price_min | money_with_currency }}
+        {%- else -%}
+          {{ curr_price_min | money_with_currency }} - {{ curr_price_max | money_with_currency }}
+        {%- endif -%}
+      {%- endif -%}
+    </span>
+    <span class="aiod-discount-badge"></span>
+  </div>
+
+  <script>
+    function hideOriginalProductPrice{{ product.id }}() {
+      const aiodPriceContainer = document.querySelector(".aiod-card-price-container[product-id='{{ product.id }}']");
+      const parentContainer = aiodPriceContainer.closest('.card-information');
+
+      if(parentContainer){
+        // Remove ALL original price elements
+        const originalPrices = parentContainer.querySelectorAll('div.price:not(.aiod-card-price-container)');
+        originalPrices.forEach(price => price.remove());
+      }
+
+      const wholeCardParentContainer = aiodPriceContainer.closest('.card-wrapper');
+      if(wholeCardParentContainer){
+        wholeCardParentContainer.classList.add('aiod-product-card-wrapper');
+      }
+    }
+
+    // Execute immediately after DOM is ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', hideOriginalProductPrice{{ product.id }});
+    } else {
+      hideOriginalProductPrice{{ product.id }}();
+    }
+  <\/script>
+{% endunless %}
+`,
+        };
+
+        // Initialize code blocks from templates and constants
+        function initializeCodeBlocks() {
+            document.querySelectorAll('.code-block').forEach(block => {
+                const codeKey = block.getAttribute('data-code-key');
+                const codeId = block.getAttribute('data-code-id');
+
+                if (codeKey && CODE_SNIPPETS[codeKey]) {
+                    // Use constant for large snippets
+                    block.textContent = CODE_SNIPPETS[codeKey];
+                } else if (codeId) {
+                    // Use template for smaller snippets
+                    const template = document.getElementById(codeId);
+                    if (template) {
+                        const code = template.textContent || template.innerText;
+                        block.textContent = code;
+                    }
+                }
+            });
+        }
+
         function copyCode(button) {
-            // Find the code block - it could be nextElementSibling or we need to look for it
-            let codeBlock = button.nextElementSibling;
-            
-            // If nextElementSibling is not a code block, look for it in the parent container
-            if (!codeBlock || !codeBlock.classList.contains('code-block')) {
-                const container = button.closest('.code-container');
-                codeBlock = container.querySelector('.code-block');
-            }
-            
+            // Find the code block
+            const container = button.closest('.code-container');
+            const codeBlock = container.querySelector('.code-block');
+            const codeKey = codeBlock.getAttribute('data-code-key');
+            const codeId = codeBlock.getAttribute('data-code-id');
+
             if (!codeBlock) {
                 console.error('Code block not found');
                 return;
             }
-            
+
+            // Get the original code from constant or template
+            let codeToCopy;
+            if (codeKey && CODE_SNIPPETS[codeKey]) {
+                codeToCopy = CODE_SNIPPETS[codeKey];
+            } else if (codeId) {
+                const template = document.getElementById(codeId);
+                codeToCopy = template ? (template.textContent || template.innerText) : codeBlock.textContent;
+            } else {
+                codeToCopy = codeBlock.textContent;
+            }
+
             const textArea = document.createElement('textarea');
-            textArea.value = codeBlock.textContent;
+            textArea.value = codeToCopy;
             document.body.appendChild(textArea);
             textArea.select();
-            
+
             try {
                 document.execCommand('copy');
                 button.textContent = 'Copied!';
                 button.classList.add('copied');
-                
+
                 setTimeout(() => {
                     button.textContent = 'Copy';
                     button.classList.remove('copied');
@@ -437,10 +536,18 @@
                 document.body.removeChild(textArea);
             }
         }
-        
+
         function openBookCall() {
             window.open(BOOK_CALL_LINK, '_blank');
         }
+
+        // Initialize code blocks when DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initializeCodeBlocks);
+        } else {
+            initializeCodeBlocks();
+        }
     </script>
 </body>
+
 </html>
