@@ -393,10 +393,11 @@
 
     If is_range_price is not passed, it will be calculated automatically
   endcomment
-  if is_range_price == blank
+
+   if is_range_price == true
     assign is_range_price = false
-    if compare_at_price_min != blank and compare_at_price_max != blank and curr_price_min != blank and curr_price_max != blank
-      if compare_at_price_min > curr_price_min
+    if curr_price_min != blank and curr_price_max != blank
+      if curr_price_max > curr_price_min
         assign is_range_price = true
       endif
     endif
