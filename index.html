@@ -377,9 +377,14 @@
         const CODE_SNIPPETS = {
             PRICE_CROSSOUT_SNIPPET: `{%- liquid
   assign target = product
+  assign selected_variant = variant
   assign available = target.available | default: false
   assign original_display_price = target.price
-  assign target_variant = variant
+
+  if selected_variant != blank
+    assign available = selected_variant.available
+    assign original_display_price = selected_variant.price
+  endif
 
   comment
     Optional range price props, pass props eg:
@@ -393,24 +398,37 @@
 
     If is_range_price is not passed, it will be calculated automatically
   endcomment
-
-   if is_range_price == true
+  
+  if is_range_price == blank
     assign is_range_price = false
-    if curr_price_min != blank and curr_price_max != blank
-      if curr_price_max > curr_price_min
+    if compare_at_price_min != blank and compare_at_price_max != blank and curr_price_min != blank and curr_price_max != blank
+      if compare_at_price_min > curr_price_min
         assign is_range_price = true
       endif
     endif
+  endif
+
+  comment
+    A specifically supplied variant is always a single-price result, even when
+    product-level range values were also supplied by the calling theme.
+  endcomment
+  if selected_variant != blank
+    assign is_range_price = false
   endif
 -%}
 
 {%- unless target == null -%}
   <div
     product-id="{{ product.id }}"
-    product-price="{{ product.price | json }}"
-    product-compare-at-price="{{ product.compare_at_price | json }}"
+    product-price="{% if selected_variant != blank %}{{ selected_variant.price | json }}{% else %}{{ product.price | json }}{% endif %}"
+    product-compare-at-price="{% if selected_variant != blank %}{{ selected_variant.compare_at_price | json }}{% else %}{{ product.compare_at_price | json }}{% endif %}"
     aiod-product-collections="{{ product.collections | map: 'id' | join: ',' }}"
-    aiod-product-variants="{% if target_variant %}{{ target_variant.id }}{% else %}{{ product.variants | map: 'id' | join: ',' }}{% endif %}"
+    aiod-product-variants="{% if selected_variant != blank %}{{ selected_variant.id }}{% else %}{{ product.variants | map: 'id' | join: ',' }}{% endif %}"
+    {%- if selected_variant != blank %}
+      aiod-selected-variant-id="{{ selected_variant.id }}"
+      aiod-selected-variant-price="{{ selected_variant.price | json }}"
+      aiod-selected-variant-compare-at-price="{{ selected_variant.compare_at_price | json }}"
+    {%- endif %}
     is_range_price="{{ is_range_price }}"
     {%- if compare_at_price_min != blank %} compare_at_price_min="{{ compare_at_price_min | json }}"{%- endif -%}
     {%- if compare_at_price_max != blank %} compare_at_price_max="{{ compare_at_price_max | json }}"{%- endif -%}
